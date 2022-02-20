@@ -12,7 +12,10 @@
  * https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
  * Used (Dropdown):
  * https://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php
- 
+ * 
+ * Used (Fading/Turning):
+ * https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+ *
  * TODO finish commenting!! and fix the weirdness of the background images
  */
 
@@ -62,11 +65,26 @@
  ********************************************************/
 
 
+/* Have the main card section of the website fade in */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    75% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+
 /* Set the background as the cheesecake image */
 
 body {
     background-image: url(https://tinyurl.com/2p86xjnp);
-    background-size: auto;
+    background-size: cover;
     z-index: -2;
 }
 
@@ -130,8 +148,9 @@ body {
 /* Initialize the header */
 
 #header {
-    display: flex;
     background-image: url(/images/parchment_background.png);
+    background-repeat: repeat;
+    border-style: inset;
     border-top: 3px;
     border-right: 3px;
     border-left: 3px;
@@ -161,6 +180,9 @@ h1,
 h3 {
     font-weight: 600;
     text-shadow: 2px 2px 5px rgba(77, 38, 0, 0.25);
+    display: inline;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
@@ -221,7 +243,6 @@ form {
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-    /* font-family: 'Playfair Display', serif; */
     font-size: 25px;
     color: rgba(190, 80, 80, 1);
     text-shadow: 1px 1px 4px rgba(77, 38, 0, 0.25);
@@ -249,11 +270,32 @@ li {
     padding-left: 10px;
 }
 
+
+/* Display the corresponding images for each list item */
+
+#cherry-li {
+    list-style-image: url(/images/cherry_cursor.png);
+}
+
+#chocolate-li {
+    list-style-image: url(/images/chocolate_cursor.png);
+}
+
+#plain-li {
+    list-style-image: url(/images/plain_cursor.png);
+}
+
+
+/* Initialize the special heading class */
+
 .special-heading {
     font-weight: 600;
     font-size: 25px;
     text-shadow: 2px 2px 5px rgba(77, 38, 0, 0.25);
 }
+
+
+/* Design the first part of the form */
 
 #form-part-1 {
     width: 100%;
@@ -261,14 +303,21 @@ li {
     text-align: left;
 }
 
+
+/* Design the data in the table */
+
 td {
     padding: 10px;
 }
+
+
+/* Design the text area */
 
 textarea {
     font-size: 14px;
     padding: 8px;
     width: 100%;
+    background-image: url(/images/parchment_background.png);
     background-repeat: repeat;
     border-width: 3px;
     border-style: dashed;
@@ -279,6 +328,9 @@ textarea {
     box-sizing: border-box;
 }
 
+
+/* Design the completed class */
+
 .completed {
     text-align: center;
     margin-top: auto;
@@ -288,6 +340,9 @@ textarea {
     text-shadow: 2px 2px 5px rgba(77, 38, 0, 0.25);
 }
 
+
+/* Design the notes class */
+
 .notes {
     font-size: 18px;
 }
@@ -295,25 +350,12 @@ textarea {
 
 /********************************************************
 * Arrow Card
-*
 ********************************************************/
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0%;
-    }
-    75% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
 
 #monthly-orders {
     background-image: url(/images/parchment_background.png);
-    position: absolute;
-    display: inline-block;
+    position: fixed;
+    display: flex;
     padding: 10px;
     padding-right: 80px;
     top: 35%;
@@ -323,7 +365,7 @@ textarea {
     -webkit-box-shadow: 0 0 50px rgba(200, 120, 50, 0.5), inset 0 0 50px rgba(200, 120, 50, 0.25);
     box-shadow: 0 0 50px rgba(200, 120, 50, 0.5), inset 0 0 50px rgba(200, 120, 50, 0.25);
     z-index: 2;
-    animation: 4s ease-out 0s 1 fadeIn;
+    animation: 2s ease-out 0s 1 fadeIn;
 }
 
 #monthly-orders:hover {
@@ -338,13 +380,6 @@ textarea {
     margin-bottom: auto;
     width: 82px;
     height: 200px;
-}
-
-h3 {
-    font-size: 28px;
-    display: inline;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .mirrored {
@@ -427,4 +462,8 @@ h3 {
     -webkit-box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
     box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+background-color: rgba(0, 0, 0, 0.1);
+
 }
