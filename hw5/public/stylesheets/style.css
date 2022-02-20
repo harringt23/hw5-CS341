@@ -92,12 +92,13 @@ body {
  ********************************************************/
 
 
-/* Introduce an element to fade in the order form */
+/* Introduce an element to fade in the order form 
+ * by applying 2D transformations
+ */
 
 @keyframes fadeAndTurn {
     0% {
         opacity: 0%;
-        /* all the  */
         transform: rotate3d(0.5, 1, 0, 20deg);
     }
     50% {
@@ -129,8 +130,8 @@ body {
 /* Initialize the header */
 
 #header {
-    /* background-image: url(/images/background.png); */
-    background-repeat: repeat;
+    display: flex;
+    background-image: url(/images/parchment_background.png);
     border-top: 3px;
     border-right: 3px;
     border-left: 3px;
@@ -147,7 +148,14 @@ body {
 }
 
 
-/* Set the parameters for h1 and h3 */
+/* Set the font size for h1 */
+
+h1 {
+    font-size: 65px;
+}
+
+
+/* Set the parameters for the rest of h1 and h3 */
 
 h1,
 h3 {
@@ -156,18 +164,11 @@ h3 {
 }
 
 
-/* Set the font size for h1 */
-
-h1 {
-    font-size: 50px;
-}
-
-
 /* Style the form-content class */
 
 #form-content {
     display: flex;
-    /* background-image: url(/images/background.png); */
+    background-image: url(/images/parchment_background.png);
     background-repeat: repeat;
     -moz-box-shadow: inset 0 0 50px rgba(200, 120, 50, 0.175);
     -webkit-box-shadow: inset 0 0 50px rgba(200, 120, 50, 0.175);
@@ -236,7 +237,6 @@ form {
 
 #order-button:hover {
     background-color: rgba(230, 200, 180, 0.875);
-    ;
     font-weight: bold;
 }
 
@@ -258,7 +258,7 @@ li {
 #form-part-1 {
     width: 100%;
     align-items: center;
-    text-align: center
+    text-align: left;
 }
 
 td {
@@ -312,8 +312,8 @@ textarea {
 
 #monthly-orders {
     background-image: url(/images/parchment_background.png);
-    position: fixed;
-    display: flex;
+    position: absolute;
+    display: inline-block;
     padding: 10px;
     padding-right: 80px;
     top: 35%;
@@ -347,19 +347,6 @@ h3 {
     margin-bottom: 20px;
 }
 
-#bonus {
-    background-image: url(/images/baked_fresh.png);
-    position: absolute;
-    right: 15px;
-    bottom: 35px;
-    background-size: 120px 120px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 120px;
-    height: 120px;
-    transform: rotate(12deg);
-}
-
 .mirrored {
     transform: scaleX(-1);
     transition: 0.5s;
@@ -373,7 +360,7 @@ h3 {
 
 #selector {
     display: inline-block;
-    border-style: dashed;
+    border-style: inset;
     border-width: 3px;
     border-color: rgba(210, 190, 170, 1);
     border-radius: 10px;
