@@ -126,7 +126,7 @@ body {
 /* Initialize the header */
 
 #header {
-    background-image: url(/images/background.png);
+    /* background-image: url(/images/background.png); */
     background-repeat: repeat;
     border-top: 3px;
     border-right: 3px;
