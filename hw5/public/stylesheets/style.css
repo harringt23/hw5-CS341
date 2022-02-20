@@ -352,6 +352,9 @@ textarea {
 * Arrow Card
 ********************************************************/
 
+
+/* Design the monthly orders */
+
 #monthly-orders {
     background-image: url(/images/parchment_background.png);
     position: fixed;
@@ -367,6 +370,9 @@ textarea {
     z-index: 2;
     animation: 2s ease-out 0s 1 fadeIn;
 }
+
+
+/* Design the hover for the monthly orders  */
 
 #monthly-orders:hover {
     right: 0;
@@ -390,8 +396,10 @@ textarea {
 
 /********************************************************
 * Dropdown Menu
-*
 ********************************************************/
+
+
+/* Design the selector */
 
 #selector {
     display: inline-block;
@@ -408,9 +416,15 @@ textarea {
     text-align: center;
 }
 
+
+/* Design the dropdown */
+
 .dropdown {
     display: inline-block;
 }
+
+
+/* Design the dropdown content */
 
 .dropdowncontent {
     display: none;
@@ -428,13 +442,22 @@ textarea {
     z-index: 5;
 }
 
+
+/* Redesign the hover */
+
 .dropdown:hover .dropdowncontent {
     display: block;
 }
 
+
+/* Design the current month */
+
 .current-month {
     display: none !important;
 }
+
+
+/* Design for all months */
 
 .month {
     display: block;
@@ -462,8 +485,4 @@ textarea {
     -webkit-box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
     box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
     background-color: rgba(0, 0, 0, 0.1);
-}
-
-background-color: rgba(0, 0, 0, 0.1);
-
 }
