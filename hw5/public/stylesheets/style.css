@@ -1,0 +1,25 @@
+/* style.js
+ * Homework 5 
+ * @author Brynn Harrington
+ * Date Modified: 10 Feb 2022
+ * 
+ * The style sheet for the cheesecake order form website 
+ * to increase the aesthetic of the website.
+ * 
+ * Used (CSS Tutorials): 
+ * https://www.w3schools.com/css/default.asp
+ * Used (Animation): 
+ * https://stackoverflow.com/questions/6805482/css3-transition-animation-on-load
+ * Used (Dropdown):
+ * https://www.tutorialrepublic.com/faq/show-hide-dropdown-menu-on-mouse-hover-using-css.php
+ 
+ * TODO finish commenting!! and fix the weirdness of the background images
+ */
+
+
+/* Set standard for all  */
+
+* {
+    color: rgb(73, 10, 29);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

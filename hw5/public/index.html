@@ -1,0 +1,176 @@
+<!-- 
+    index.html
+    Homework 5 
+    @author Brynn Harrington
+    Date Modified: 10 Feb 2022
+    
+    This HTML file displays a cheesecake order form website, utilized CSS 
+    to increase the aesthetic of the website, and express/node.js/javascript
+    to better handle the data management system.
+    
+    Used: a tiny url was utilized to shorten the length of the cheesecake image
+    Used (HTML Tutorial):
+    https://www.w3schools.com/html/default.asp 
+    Used (Default Radio Button Value):
+    https://www.w3schools.com/jsref/prop_radio_defaultchecked.asp 
+    Used (Vertical Scroll Bar): 
+    https://tutorialdeep.com/knowhow/open-monthDropdown-hover-jquery-js/ 
+    Used (Spacing):
+    https://mailtrap.io/blog/nbsp/
+    Used (Selecting):
+    https://www.geeksforgeeks.org/how-to-set-the-default-value-for-an-html-select-element/ 
+  -->
+<!DOCTYPE html>
+
+<!-- Set the language to English -->
+<html lang="eng">
+
+<!-- Head -->
+<!-- TODO IF CHANGE IMAGES FIX -->
+
+<head>
+    <!-- Label the title "Cheesecake Order Form"-->
+    <title>Cheesecake Order Form</title>
+    <!-- Import the jQuery library, javascript and stylesheet files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/cheesecake_functions.js"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+
+<!-- Body -->
+
+<body class="cursor">
+    <!-- Set a gradient division -->
+    <div id="gradient-layer"></div>
+
+    <!-- Set a content wrapper division -->
+    <div id="content-wrapper">
+
+        <!-- Display the header "Cheesecake Order Form"-->
+        <div id="header">
+            <h1>Cheesecake Order Form &#127856</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div id="form-content">
+            <!-- Display the cheesecake image. -->
+            <img src="https://tinyurl.com/2p86xjnp" alt="wikimedia cheesecake" width="185" height="180" />
+
+            <!-- Form for the order information -->
+            <form id="order">
+                <!-- Table of Options for Front-End Side -->
+                <table id="form-part-1">
+                    <!-- Text for the quantity and toppings in first row -->
+                    <tr>
+                        <!-- Quantity and topping titles -->
+                        <td><span class="special-heading">Quantity</span></td>
+                        <td><span class="special-heading">Topping</span></td>
+                    </tr>
+
+                    <!-- The next row holds the quantity options and topping options -->
+                    <tr>
+                        <td>
+                            <select name="quantity" id="quantity" class="plain">
+                                <option value="1"> 1 </option>
+                                <option value="2"> 2 </option>
+                                <option value="3" selected="selected"> 3 </option>
+                                <option value="4"> 4 </option>
+                                <option value="5"> 5 </option>
+                                <option value="6"> 6 </option>
+                                <option value="7"> 7 </option>
+                                <option value="8"> 8 </option>
+                                <option value="9"> 9 </option>
+                              </select>
+                        </td>
+
+                        <!-- Radio buttons for toppings displayed with label and breaks (cherry default) -->
+                        <td>
+                            <div id="radio-buttons">
+                                <!-- Plain -->
+                                <label class="cherry">
+                            <input type="radio" id="cherry" name="type" value="cherry" checked="checked">
+                              Cherry&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                            </input>
+                          </label><br>
+                                <!-- Chocolate -->
+                                <label class="chocolate">
+                            <input type="radio" id="chocolate" name="type" value="chocolate">
+                              Chocolate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                            </input>
+                          </label><br>
+                                <!-- Plain -->
+                                <label class="plain">
+                            <input type="radio" id="plain" name="type" value="plain">
+                              Plain&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                            </input>
+                          </label><br>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <!-- Text for the notes (break the paragraph)-->
+                <div id="form-part2">
+                    <span class="special-heading">Notes:</span><br>
+                    <textarea form="order" rows="4" cols="50" id="notes" class="plain" placeholder="Enter any special instructions here."></textarea>
+                    <br><br>
+                    <input type="submit" id="order-button" value="Order" class="plain" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Total orders for the past month with a sliding arrow for ✨aesthetics✨-->
+    <div id="testimonials">
+        <div id="testimonial-arrow" class="mirrored"></div>
+        <div>
+            <span class="padded">
+                         <h3 id="total-orders">Total Orders For </h3>
+  
+                    <!-- Add in the dropdown menu. See accreditation in CSS comments -->
+  
+                    <div class="dropdown">
+                         <h3 id="selector">Jan</h3></span>
+            <div class="dropdowncontent">
+                <div id="months">
+                    <div id="Jan" class="month current-month">Jan</div>
+                    <div id="Feb" class="month">Feb</div>
+                    <div id="Mar" class="month">Mar</div>
+                    <div id="Apr" class="month">Apr</div>
+                    <div id="May" class="month">May</div>
+                    <div id="Jun" class="month">Jun</div>
+                    <div id="Jul" class="month">Jul</div>
+                    <div id="Aug" class="month">Aug</div>
+                    <div id="Sep" class="month">Sep</div>
+                    <div id="Oct" class="month">Oct</div>
+                    <div id="Nov" class="month">Nov</div>
+                    <div id="Dec" class="month">Dec</div>
+                </div>
+            </div>
+
+            <!-- The list of orders per the quantity and topping -->
+            <ul id="list_orders">
+                <li id="cherry-li" class="cherry">
+                    <span id="cherry-quantity">11</span> cherry
+                </li>
+                <li id="chocolate-li" class="chocolate">
+                    <span id="chocolate-quantity">17</span> chocolate
+                </li>
+                <li id="plain-li" class="plain">
+                    <span id="plain-quantity">31</span> plain
+                </li>
+            </ul>
+            <br />
+        </div>
+        <div id="bonus"></div>
+    </div>
+
+
+
+
+</body>
+
+</html>
