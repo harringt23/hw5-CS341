@@ -33,9 +33,11 @@
     <title>Cheesecake Order Form</title>
     <!-- Import the jQuery library, javascript and stylesheet files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="javascripts/cheesecake_functions.js"></script>
     <link rel="stylesheet" href="stylesheets/style.css">
-
+    <script src="javascripts/arrow_handler.js"></script>
+    <script type="text/javascript" src="/javascripts/cheesecake_functions.js"></script>
+    <script type="text/javascript" src="/javascripts/dropdown_handler.js"></script>
+    <script type="text/javascript" src="/javascripts/form_handler.js"></script>
 </head>
 
 <!-- Body -->
@@ -124,8 +126,8 @@
 
 
     <!-- Total orders for the past month with a sliding arrow for ✨aesthetics✨-->
-    <div id="testimonials">
-        <div id="testimonial-arrow" class="mirrored"></div>
+    <div id="monthly-orders">
+        <div id="arrow" class="mirrored"></div>
         <div>
             <span class="padded">
                          <h3 id="total-orders">Total Orders For </h3>
