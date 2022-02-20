@@ -35,6 +35,7 @@
 
 .cursor,
 .plain {
+    /* Use the plain cursors image */
     cursor: url(/images/plain_cursor.png), auto;
 }
 
@@ -42,6 +43,7 @@
 /* Cherry cursor */
 
 .cherry {
+    /* Use the cherry cursor image */
     cursor: url(/images/cherry_cursor.png), auto;
 }
 
@@ -49,6 +51,7 @@
 /* Chocolate cursor */
 
 .chocolate {
+    /* Use the chocolate cursor image */
     cursor: url(/images/chocolate_cursor.png), auto;
 }
 
