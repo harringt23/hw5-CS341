@@ -4,7 +4,6 @@
  * Date Modified: 10 Feb 2022
  * 
  * This is the handler for the forms
- * TODO - fix updating
  */
 
 // handle the forms
@@ -30,11 +29,11 @@ form_submit_handler = function(e) {
             $("form").append("Notes: <br />");
             $("form").append("<span class=\"notes\">" + notes + "</span>");
 
-            // ceneter and format
+            // center and format
             $("form").addClass("completed");
 
             // initialize the new order 
-            var order = "/neworder?order[quantity]=" + quantity + "&order[topping]=" + type + "&order[notes]=" + notes;
+            var order = "/neworder&order[quantity]=" + quantity + "&order[topping]=" + type + "&order[notes]=" + notes;
 
             // send the new order through post
             $.post(order, function(error) {

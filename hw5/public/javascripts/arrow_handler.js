@@ -11,6 +11,6 @@ arrow_change_handler = function(e) {
 }
 
 $(function() {
-    // If the testamonial card is "mouseover'd" or "mouseout'd", toggle the direction of the arrow.
+    // if the arrow card is "mouseover'd" or "mouseout'd", toggle the direction of the arrow.
     $("#onials").mouseover(arrow_change_handler).mouseout(arrow_change_handler);
 });

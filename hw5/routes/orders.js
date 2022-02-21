@@ -45,11 +45,11 @@ router.use(function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     // testing 
-    console.log("[orders.js] <router.post>   |  Retrieving request detail")
+    console.log("[orders.js] <router.post>   |  Retrieving request detail");
     const month = req.query.month;
     console.log("                            .      " + month + "\n                            .      ");
     console.log("[orders.js] <router.post>   |  Querying database for quantities for month of '" + month + "'...");
-    // enter the callback hell
+    // enter the callback 
     get_num_orders("CHERRY", month, function(total_cherry) {
         console.log("[orders.js] <router.post>   |  Returned number for cherry: " + total_cherry);
         get_num_orders("PLAIN", month, function(total_plain) {
