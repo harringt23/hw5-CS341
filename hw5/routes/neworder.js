@@ -45,7 +45,9 @@ router.post('/', function(req, res, next) {
     // get the month value 
     console.log("[neworder.js] <router.post> |  ...orderid created...");
     const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-    const month = months[Math.floor(Math.random() * 12)];
+    // const month = months[Math.floor(Math.random() * 12)];
+    const month = months[1];
+
     console.log("[neworder.js] <router.post> |  ...month retrieved...");
 
     // get the day value using spicy math
