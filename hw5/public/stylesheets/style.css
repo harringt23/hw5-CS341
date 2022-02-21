@@ -65,21 +65,6 @@
  ********************************************************/
 
 
-/* Have the main card section of the website fade in */
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0%;
-    }
-    75% {
-        opacity: 50%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-
 /* Set the background as the cheesecake image */
 
 body {
@@ -167,10 +152,14 @@ body {
 }
 
 
-/* Set the font size for h1 */
+/* Set the font size for h1 and h3*/
 
 h1 {
     font-size: 65px;
+}
+
+h3 {
+    font-size: 28;
 }
 
 
@@ -213,10 +202,10 @@ form {
     font-size: 15px;
     font-weight: bold;
     width: 80px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(235, 208, 208, 0.5);
     text-align: center;
     border-width: 3px;
-    border-style: dashed;
+    border-style: ridge;
     border-color: rgba(210, 190, 170, 1);
     border-radius: 4px;
 }
@@ -229,7 +218,7 @@ form {
     border-width: 3px;
     border-radius: 12px;
     border-color: rgba(190, 80, 80, 1);
-    border-style: dashed;
+    border-style: ridge;
     width: 350px;
     height: 350px;
     border-radius: 12px;
@@ -248,7 +237,7 @@ form {
     text-shadow: 1px 1px 4px rgba(77, 38, 0, 0.25);
     background-color: rgba(240, 210, 190, 0.75);
     border-width: 3px;
-    border-style: dashed;
+    border-style: ridge;
     border-color: rgba(210, 100, 100, 1);
     border-radius: 12px;
 }
@@ -435,7 +424,7 @@ textarea {
     margin-top: -20px;
     border-radius: 15px;
     padding: 12px 16px;
-    /* background-image: url(/images/parchment_background.png); */
+    background-image: url(/images/parchment_background.png);
     -moz-box-shadow: 0 0 20px rgba(200, 120, 50, 0.5), inset 0 0 20px rgba(200, 120, 50, 0.25);
     -webkit-box-shadow: 0 0 20px rgba(200, 120, 50, 0.5), inset 0 0 20px rgba(200, 120, 50, 0.25);
     box-shadow: 0 0 20px rgba(200, 120, 50, 0.5), inset 0 0 20px rgba(200, 120, 50, 0.25);
@@ -461,28 +450,21 @@ textarea {
 
 .month {
     display: block;
+    background-color: rgb(204, 159, 120);
     padding: 5px;
-    border-style: dashed;
+    border-style: ridge;
     border-width: 3px;
     border-color: rgba(210, 190, 170, 0);
     border-radius: 10px;
     user-select: none;
 }
 
-.month:hover {
-    border-color: rgba(210, 190, 170, 1);
-    font-weight: bold;
-    -moz-box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
-    -webkit-box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
-    box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
+.month:hover,
 .month:active {
     border-color: rgba(210, 190, 170, 1);
     font-weight: bold;
     -moz-box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
     -webkit-box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
     box-shadow: 0 0 10px rgba(200, 120, 50, 0.25), inset 0 0 10px rgba(200, 120, 50, 0.125);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
 }

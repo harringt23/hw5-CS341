@@ -158,44 +158,58 @@
     <div id="monthly-orders">
         <div id="arrow" class="mirrored"></div>
         <div>
-            <!-- <span class="padded"> -->
-            <h3 id="total-orders">Total Orders For </h3>
+            <table>
+                <tr>
+                    <td>
+                        <!-- <span class="padded"> -->
+                        <h3 id="total-orders">Total Orders For </h3>
 
-            <!-- Add in the dropdown menu. See accreditation in CSS comments -->
+                    </td>
+                    <td>
+                        <!-- Add in the dropdown menu -->
 
-            <div class="dropdown">
-                <h3 id="selector">Jan</h3>
-                <!-- </span> -->
-                <div class="dropdowncontent">
-                    <div id="months">
-                        <div id="Jan" class="month current-month">Jan</div>
-                        <div id="Feb" class="month">Feb</div>
-                        <div id="Mar" class="month">Mar</div>
-                        <div id="Apr" class="month">Apr</div>
-                        <div id="May" class="month">May</div>
-                        <div id="Jun" class="month">Jun</div>
-                        <div id="Jul" class="month">Jul</div>
-                        <div id="Aug" class="month">Aug</div>
-                        <div id="Sep" class="month">Sep</div>
-                        <div id="Oct" class="month">Oct</div>
-                        <div id="Nov" class="month">Nov</div>
-                        <div id="Dec" class="month">Dec</div>
-                    </div>
-                </div>
+                        <div class="dropdown">
+                            <h3 id="selector">Jan</h3>
+                            <!-- </span> -->
+                            <div class="dropdowncontent">
+                                <div id="months">
+                                    <div id="Jan" class="month current-month">Jan</div>
+                                    <div id="Feb" class="month">Feb</div>
+                                    <div id="Mar" class="month">Mar</div>
+                                    <div id="Apr" class="month">Apr</div>
+                                    <div id="May" class="month">May</div>
+                                    <div id="Jun" class="month">Jun</div>
+                                    <div id="Jul" class="month">Jul</div>
+                                    <div id="Aug" class="month">Aug</div>
+                                    <div id="Sep" class="month">Sep</div>
+                                    <div id="Oct" class="month">Oct</div>
+                                    <div id="Nov" class="month">Nov</div>
+                                    <div id="Dec" class="month">Dec</div>
+                                </div>
+                            </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- The list of orders per the quantity and topping -->
+                        <ul id="list_orders">
+                            <li id="cherry-li" class="cherry">
+                                <span id="cherry-quantity">11</span> cherry
+                            </li>
+                            <li id="chocolate-li" class="chocolate">
+                                <span id="chocolate-quantity">17</span> chocolate
+                            </li>
+                            <li id="plain-li" class="plain">
+                                <span id="plain-quantity">31</span> plain
+                            </li>
+                        </ul>
+                        <br>
+                    </td>
+                </tr>
+            </table>
 
-                <!-- The list of orders per the quantity and topping -->
-                <ul id="list_orders">
-                    <li id="cherry-li" class="cherry">
-                        <span id="cherry-quantity">11</span> cherry
-                    </li>
-                    <li id="chocolate-li" class="chocolate">
-                        <span id="chocolate-quantity">17</span> chocolate
-                    </li>
-                    <li id="plain-li" class="plain">
-                        <span id="plain-quantity">31</span> plain
-                    </li>
-                </ul>
-                <br>
+
+
             </div>
         </div>
     </div>
